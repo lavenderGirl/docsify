@@ -1,5 +1,3 @@
-### [docsify](https://docsify.js.org/#/zh-cn/)
-
 >愿你呼吸的每一个瞬间，都是你想要过的生活。
 
 ##### 用以下14条不断鞭策自己
@@ -98,3 +96,5 @@ Busy, Don't forget to read and exercise
  
 - 人生，就是一场长跑
 Life is a long run
+
+#### [docsify](https://docsify.js.org/#/zh-cn/) - [docsify各种配置查看](https://segmentfault.com/a/1190000017576714#articleHeader0)
