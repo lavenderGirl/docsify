@@ -1,8 +1,10 @@
 * [向阳而生](README.md)
 
 * 韶华追忆
-    * [2018](life/2018.md)
+    * [心情随笔](life/心情随笔.md)
     * [2019](life/2019.md)
+    * [2018](life/2018.md)
+    
 
 * 技术杂谈
     * [website](technology/website.md)
