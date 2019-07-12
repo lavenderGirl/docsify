@@ -391,3 +391,15 @@ $ ssh-keygen -t rsa -C "xxxxxx@yy.com"
 # 查看生成的公钥
 $ cat ~/.ssh/id_rsa.pub
 ```
+
+# package.json
+```
+  --quiet 控制台中不输出打包的信息
+  --compress 开启gzip压缩
+  --progress 显示打包的进度
+  
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --quiet --config config/webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=prod webpack --config config/webpack.config.prod.js"
+  },
+```
