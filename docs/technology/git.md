@@ -407,3 +407,48 @@ $ cat ~/.ssh/id_rsa.pub
     "build": "cross-env NODE_ENV=prod webpack --config config/webpack.config.prod.js"
   },
 ```
+
+# webpack JS启用babel转码
+```
+# 首先安装
+npm i -D babel-loader babel-core babel-preset-env
+
+# 在webpack的配置文件中,添加js的处理模块
+module:{
+    rules:[
+        //‘transform-runtime’ 插件告诉babel要引用runtime来代替注入
+        {
+            test:/\.js$/,
+            exclude:/(node_modules)/,
+            use:{
+                loader:'babel-loader',
+                options:{
+                    cacheDirectory:true
+                }
+            }
+        }
+    ]
+}
+
+# .babelrc文件如下：
+{
+    "presets":["env"]
+}
+
+# 再安装
+npm install babel-plugin-transform-runtime --save-dev
+npm install babel-runtime --save
+
+# 修改 .babelrc
+{
+    "presets":["env"],
+    "plugins":[
+        ["transform-runtime",{
+            "helpers":true,
+            "polyfill":true,
+            "regenerator":true,
+            "moduleName":"babel-runtime"
+        }]
+    ]
+}
+```
