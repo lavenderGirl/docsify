@@ -1,9 +1,8 @@
 # Git
-文章地址：[https://www.cnblogs.com/chenwolong/p/GIT.html](https://www.cnblogs.com/chenwolong/p/GIT.html)
 
 一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要记住60～100个命令。
 ![](https://i.loli.net/2018/11/20/5bf3d93442601.png)
-下面是我整理的常用 Git 命令清单。几个专用名词的译名如下。
+下面是常用 Git 命令清单。几个专用名词的译名如下。
 ```
 Workspace：工作区
 Index / Stage：暂存区
@@ -289,6 +288,7 @@ $ git stash pop
 # 生成一个可供发布的压缩包
 $ git archive
 ```
+git原文章地址：[https://www.cnblogs.com/chenwolong/p/GIT.html](https://www.cnblogs.com/chenwolong/p/GIT.html)
 
 # 特殊处理-回滚
 ```
@@ -396,18 +396,6 @@ $ ssh-keygen -t rsa -C "xxxxxx@yy.com"
 $ cat ~/.ssh/id_rsa.pub
 ```
 
-# package.json
-```
-  --quiet 控制台中不输出打包的信息
-  --compress 开启gzip压缩
-  --progress 显示打包的进度
-  
-  "scripts": {
-    "dev": "cross-env NODE_ENV=dev webpack-dev-server --quiet --config config/webpack.config.dev.js",
-    "build": "cross-env NODE_ENV=prod webpack --config config/webpack.config.prod.js"
-  },
-```
-
 # webpack JS启用babel转码
 ```
 # 首先安装
@@ -451,4 +439,119 @@ npm install babel-runtime --save
         }]
     ]
 }
+
+# 安装babel-polyfill，然后再import 'babel-polyfill'使支持promise
+install --save-dev babel-polyfill
+```
+
+# package.json
+```
+  --quiet 控制台中不输出打包的信息
+  --compress 开启gzip压缩
+  --progress 显示打包的进度
+  
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --quiet --config config/webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=prod webpack --config config/webpack.config.prod.js"
+  },
+```
+
+# nodejs npm常用命令
+
+npm是一个node包管理和分发工具，已经成为了非官方的发布node模块（包）的标准。有了npm，可以很快的找到特定服务要使用的包，进行下载、安装以及管理已经安装的包。
+```
+# 会引导你创建一个package.json文件，包括名称、版本、作者这些信息等
+npm init
+
+# 查看当前包的安装路径
+npm root
+
+# 查看全局的包的安装路径
+npm root -g
+
+# 查看npm安装的版本
+npm -v
+
+node的安装分为全局模式和本地模式。
+一般情况下会以本地模式运行，包会被安装到和你的应用程序代码的本地node_modules目录下。
+在全局模式下，Node包会被安装到Node的安装目录下的node_modules下。
+
+# 安装Node模块,安装完毕后会产生一个node_modules目录，其目录下就是安装的各个node模块。
+npm install moduleNames
+
+# 默认会安装express的最新版本
+npm install express 
+
+# 安装指定版本
+npm install express@3.0.6
+
+# 将模块依赖关系写入到package.json文件的dependencies参数中
+npm install <name> --save 
+
+# 将模块依赖关系写入到package.json文件的devDependencies参数中
+npm install <name> -dev 
+
+# 全局安装,全局的安装是供命令行使用
+npm install moduleName -g。
+
+# 清除缓存
+npm cache clean
+
+# 验证缓存
+npm cache verify
+
+# 用淘宝npm镜像替换npm 
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+# 查看node模块的package.json文件夹
+npm view moduleNames
+
+# 查看package.json文件夹下某个标签的内容
+npm view moduleName labelName
+
+# 查看当前目录下已安装的node包,Node模块搜索是从代码执行的当前目录开始的，搜索结果取决于当前使用的目录中的node_modules下的内容
+npm list
+
+# 查看帮助命令
+npm help
+
+# 模块信息（名称、版本号、依赖关系、Repo）例如：npm view jquery author
+npm view <moudleName> [package.json属性名称]
+
+# 查看包的依赖关系
+npm view moudleName dependencies
+
+# 查看包的源文件地址
+npm view moduleName repository.url
+
+# 查看包所依赖的Node的版本
+npm view moduleName engines
+
+# 查看npm使用的所有文件夹
+npm help folders
+
+# 用于更改包内容后进行重建
+npm rebuild moduleName
+
+# 检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新
+npm outdated
+
+# 更新node模块 npm update [<name><version>][-g]/[--save][-dev]
+npm update moduleName 
+
+# 卸载node模块 npm uninstall [<name><version>][-g]/[--save][-dev]
+npm uninstall moudleName
+
+# 一个npm包是包含了package.json的文件夹，package.json描述了这个文件夹的结构。访问npm的json文件夹的方法如下：
+$ npm help json 
+
+# 发布一个npm包的时候，需要检验某个包名是否已存在
+$ npm search packageName
+
+# npm模块发布,发布之前我们必须在NPM上有一个自己的账号
+npm publish <name>
+
+# npm账号注册，以邮箱方式
+npm adduser
+
 ```
