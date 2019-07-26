@@ -1,81 +1,20 @@
-##### 愿你我都能在自己的时区里绽放光彩。
 
-- 在时间上，纽约走在加州前面三个小时，
-New York is 3 hours ahead of California,
- 
-- 但加州并没有变慢。
-but it does not make California slow.
- 
-- 有人22岁就毕业了，
-Someone graduated at the age of 22,
- 
-- 但等了五年才找到好工作！
-but waited 5 years before securing a good job!
- 
-- 有人25岁就当上了CEO，
-Someone became a CEO at 25,
- 
-- 却在50岁去世了。
-and died at 50.
- 
-- 也有人直到50岁才当上CEO，
-While another became a CEO at 50,
- 
-- 最后活到90岁。
-and lived to 90 years.
- 
-- 有人依然单身，
-Someone is still single,
- 
-- 而别人却早已结婚。
-while someone else got married.
- 
-- 奥巴马55岁退任总统，
-Obama retires at 55,
- 
-- 而川普却是70岁才开始当。
-but Trump starts at 70.
- 
-- 世上每个人都有自己的发展时区。
-Absolutely everyone in this world works based on their Time Zone.
- 
-- 身边有些人看似走在你前面，
-People around you might seem to go ahead of you,
- 
-- 也有人看似走在你后面。
-some might seem to be behind you.
- 
-- 但其实每个人在自己的时区有自己的步程。
-But everyone is running their own RACE, in their own TIME.
- 
-- 不用嫉妒或嘲笑他们。
-Don't envy them or mock them.
- 
-- 他们都在自己的时区，你在你的！
-They are in their TIME ZONE, and you are in yours!
- 
-- 所以，别放松。
- So, Never Give up
- 
-- 你没有落后，
-You're not LATE.
- 
-- 你没有领先。
-You're not EARLY.
- 
-- 在命运为你安排的属于你自己的时区里，一切都非常准时。
-You are very much ON TIME, and in your TIME ZONE Destiny set up for you.
- 
-- 好，别忘了危机与奋斗
-Well, Don't forget the crisis and the struggle.
- 
-- 难，别忘了梦想与坚持
-Hard. Don't forget the dream and the persistence.
- 
-- 忙，别忘了读书与锻炼
-Busy, Don't forget to read and exercise
- 
-- 人生，就是一场长跑
-Life is a long run
+#### 前端好文，不断更新
 
-#### [docsify](https://docsify.js.org/#/zh-cn/) - [docsify各种配置查看](https://segmentfault.com/a/1190000017576714#articleHeader0)
+- [从前端到CTO——程序员的成长之路](http://www.yyyweb.com/5059.html)
+- [GitHub最全前端资源汇总](https://helloqingfeng.github.io/front-end-index/index.html)
+- [前端工具TOP100](https://www.awesomes.cn/rank)
+- [什么是前端工程化](https://github.com/fouber/blog/issues/10?from=timeline&isappinstalled=0#)
+- [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/guide/#%E5%8A%9F%E8%83%BD)
+- [Windows端口占用解决办法](https://www.jianshu.com/p/8de15e9ee7a0)
+- [程序员必须知道的几个Git代码托管平台](https://www.cnblogs.com/zjoch/p/5291901.html)
+- [git与码云](https://www.jianshu.com/p/8f068dca7254)
+- [git和码云的使用](https://www.cnblogs.com/riverdubu/p/6491944.html)
+- [打包配置参考](https://github.com/lhy2813419591/webpackTemplate)
+- [GIT 常用命令](https://www.cnblogs.com/chenwolong/p/GIT.html)
+- [盘点2017年崛起的那些 JS 项目](http://www.yyyweb.com/5028.html)
+- [Vue实战篇（Vue仿今日头条）](https://juejin.im/post/5a7914386fb9a063543c0f44?utm_source=gold_browser_extension#heading-10)
+- [2018年最值得关注的30个Vue开源项目](https://juejin.im/entry/5b0dfa9151882539e7429714?utm_source=gold_browser_extension)
+
+---
+- [gitHub链接](https://github.com/lavenderGirl?tab=repositories)、[简书人生](https://www.jianshu.com/u/8fc85165da02)
