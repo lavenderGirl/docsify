@@ -15,6 +15,8 @@
 ### VSCode与Git，Git与Github。 
 [【先去下载git】](https://git-scm.com/)[【Git 中文安装教程】](https://www.cnblogs.com/ximiaomiao/p/7140456.html)百度看了好多篇资料，发现[【Git工具详解以及与GitHub的配合使用】](https://www.cnblogs.com/Ant-soldier/p/6106777.html)这篇文章说的还是很详细的，毕竟我看下来，通过实际操作，虽说不上全通，至少从github上拉下来后，在vscode里修改后，再推送到github上是OK了。后续慢慢熟悉起来。[如何让github的项目能够访问的参考资料](http://www.cnblogs.com/wyhlightstar/p/6669936.html?utm_source=itdadao&utm_medium=referral)
 
+[gitHub到底能做什么](https://github.com/phodal/github)
+
 ## VUE
 ### vue 项目构建
 在node.js 以及npm安装的前提下。用vue-cli脚手架简单构建一个项目。
