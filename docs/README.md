@@ -1,8 +1,9 @@
 
-#### 前端好文，不断更新
+#### [简书人生](https://www.jianshu.com/u/8fc85165da02)
+#### [docsify官网](https://docsify.js.org/#/zh-cn/) 
+#### [docsify各种配置查看](https://segmentfault.com/a/1190000017576714#articleHeader0)
+#### 前端值得一看的文章
 
-- [从前端到CTO——程序员的成长之路](http://www.yyyweb.com/5059.html)
-- [GitHub最全前端资源汇总](https://helloqingfeng.github.io/front-end-index/index.html)
 - [前端工具TOP100](https://www.awesomes.cn/rank)
 - [什么是前端工程化](https://github.com/fouber/blog/issues/10?from=timeline&isappinstalled=0#)
 - [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/guide/#%E5%8A%9F%E8%83%BD)
@@ -17,6 +18,5 @@
 - [2018年最值得关注的30个Vue开源项目](https://juejin.im/entry/5b0dfa9151882539e7429714?utm_source=gold_browser_extension)
 
 
-##### [docsify官网](https://docsify.js.org/#/zh-cn/) ——附上[docsify各种配置查看](https://segmentfault.com/a/1190000017576714#articleHeader0)
----
-- [gitHub链接](https://github.com/lavenderGirl?tab=repositories)、[简书人生](https://www.jianshu.com/u/8fc85165da02)
+
+
