@@ -1,8 +1,6 @@
 
-#### [简书人生](https://www.jianshu.com/u/8fc85165da02)
-#### [docsify官网](https://docsify.js.org/#/zh-cn/) 
-#### [docsify各种配置查看](https://segmentfault.com/a/1190000017576714#articleHeader0)
-#### 前端值得一看的文章
+
+##### 前端值得一看的文章
 
 - [前端工具TOP100](https://www.awesomes.cn/rank)
 - [什么是前端工程化](https://github.com/fouber/blog/issues/10?from=timeline&isappinstalled=0#)
@@ -18,5 +16,7 @@
 - [2018年最值得关注的30个Vue开源项目](https://juejin.im/entry/5b0dfa9151882539e7429714?utm_source=gold_browser_extension)
 
 
-
+##### [简书人生](https://www.jianshu.com/u/8fc85165da02)
+##### [docsify官网](https://docsify.js.org/#/zh-cn/) 
+##### [docsify各种配置查看](https://segmentfault.com/a/1190000017576714#articleHeader0)
 
