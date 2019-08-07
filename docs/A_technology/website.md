@@ -1,5 +1,18 @@
 # website
 
+- [免费可商用高清图库站](https://www.uisdc.com/15-commercially-available-gallery)
+  - [mixkit插画素材](https://mixkit.co/art/)
+  - [unsplash高质多量](https://unsplash.com/)
+  - [pixabay颜色分类](https://pixabay.com/photos/)
+  - [kaboompics生活方式&室内设计](https://kaboompics.com/gallery)
+  - [lifeofpix摄影师高质](https://www.lifeofpix.com/)
+  - [gratisography创意](https://gratisography.com/)
+  - [foodiesfeed美食](https://www.foodiesfeed.com/)
+  - [artic博物馆](https://www.artic.edu/collection)
+  - [pissang3D立体](https://pissang.github.io/little-big-city/)
+  - [wangyasai粒子效果生成器](https://wangyasai.github.io/designtools.html)
+  - [优优教程网](https://uiiiuiii.com/inspiration#inspiration-menu)
+
 - 工具站
   - [腾讯文档](https://docs.qq.com/desktop/?_from=1)
   - [docsify一个神奇的文档网站生成工具](https://docsify.js.org/#/zh-cn/)
