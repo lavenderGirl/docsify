@@ -4,6 +4,9 @@
 
 [gitHub到底能做什么](https://github.com/phodal/github)
 
+- [Node.js + Git + github page + Hexo构建博客](https://hexo.io/zh-cn/docs/index.html)
+- [超详细Hexo+Github博客搭建小白教程](https://zhuanlan.zhihu.com/p/35668237)
+
 ### 如何判断一个变量是否为数组（isArray）
 
 1、instanceof

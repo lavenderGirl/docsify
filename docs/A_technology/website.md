@@ -14,19 +14,16 @@
   - [优优教程网](https://uiiiuiii.com/inspiration#inspiration-menu)
 
 - 工具站
-  - [腾讯文档](https://docs.qq.com/desktop/?_from=1)
+  - [稿定设计](https://www.gaoding.com/)
+  - [在线PS](https://ps.gaoding.com/#/)
+  - [腾讯文档](https://docs.qq.com/desktop/)
   - [docsify一个神奇的文档网站生成工具](https://docsify.js.org/#/zh-cn/)
-  - [高清图片](https://stocksnap.io/)
-  - [图床工具https://sm.ms/ 上传图片返回链接的网站-最大图片上传限制5M](https://sm.ms/)
-  - [智图-其他格式转换成webP](http://zhitu.isux.us/)
-  - [Node.js + Git + github page + Hexo构建博客](https://hexo.io/zh-cn/docs/index.html)
-  - [超详细Hexo+Github博客搭建小白教程](https://zhuanlan.zhihu.com/p/35668237)
+  - [图床工具-上传图片返回链接的网站-限制5M](https://sm.ms/)
+  - [智图-其他格式转换成webP-图片优化](http://zhitu.isux.us/)
   
 - 设计站 
   - [优波-设计师必备网址----- 强烈推荐](https://www.ubuuk.com/)
-  - [Ant Design](https://ant.design/index-cn)
   - [千通彩色彩管理](https://www.qtccolor.com/Product/GP1601N.aspx#tab=1)
-  - [花瓣网](http://huaban.com/)
   
 - 前端站
   - [vue](https://cn.vuejs.org/) 
@@ -38,6 +35,7 @@
   - [less](http://lesscss.cn/)
   - [font-awesome](http://www.fontawesome.com.cn/)
   - [微信小程序](https://developers.weixin.qq.com/miniprogram/dev/framework/)
+  - [Ant Design Vue](https://vue.ant.design/docs/vue/introduce-cn/)
   - [前端网址导航](http://www.alloyteam.com/nav/)
   - [掘金酱](http://e.xitu.io/)
 

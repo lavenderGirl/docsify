@@ -9,7 +9,7 @@
 
 * 技术杂谈
     * [前端好文](A_technology/好文超链.md)
-    * [网站收集](A_technology/website.md)
+    * [好站推荐](A_technology/website.md)
     * [git、npm、gitflow](A_technology/git.md)
     * [CSS](A_technology/CSS.md)
     * [Javascript](A_technology/Javascript.md)
