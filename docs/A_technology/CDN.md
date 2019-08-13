@@ -1,0 +1,20 @@
+#### 平时常用CDN
+- vue
+    - [vue@2.6.10](https://cdn.jsdelivr.net/npm/vue)
+- element-ui-2.4.0
+    - [https://unpkg.com/element-ui@2.4.0/lib/theme-chalk/index.css](https://unpkg.com/element-ui@2.4.0/lib/theme-chalk/index.css)
+    - [https://unpkg.com/element-ui@2.4.0/lib/index.js](https://unpkg.com/element-ui@2.4.0/lib/index.js)
+- element-ui-2.11.0(主要是针对多选门店只有在最新版本才有此功能，用到时可有针对性的引用最新版本)
+    - [https://unpkg.com/element-ui@2.11.0/lib/theme-chalk/index.css](https://unpkg.com/element-ui@2.11.0/lib/theme-chalk/index.css)
+    - [https://unpkg.com/element-ui@2.11.0/lib/index.js](https://unpkg.com/element-ui@2.11.0/lib/index.js)
+- axios
+    - [https://unpkg.com/axios@0.19.0/dist/axios.min.js](https://unpkg.com/axios@0.19.0/dist/axios.min.js)
+- echarts
+    - [https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts-en.min.js](https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts-en.min.js)
+- countUp
+    - [https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js](https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js)
+- animate.css
+    - [https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css](https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css)
+- swiper
+    - [https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css](https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css)
+    - [https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js](https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js)

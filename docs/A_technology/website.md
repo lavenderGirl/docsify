@@ -14,7 +14,8 @@
   - [优优教程网](https://uiiiuiii.com/inspiration#inspiration-menu)
 
 - 工具站
-  - [稿定设计](https://www.gaoding.com/)
+  - [稿定设计](https://www.gaoding.com/) 
+  - [稿定设计-一键生成海报](https://www.gaoding.com/design?id=13468739&mode=user)
   - [在线PS](https://ps.gaoding.com/#/)
   - [腾讯文档](https://docs.qq.com/desktop/)
   - [docsify一个神奇的文档网站生成工具](https://docsify.js.org/#/zh-cn/)
@@ -41,9 +42,11 @@
 
 - 第三方组件
   - [swiper](https://www.swiper.com.cn/)
+  - [animate.css预设css3动画库](https://github.com/daneden/animate.css)
   - [mescroll-精致的下拉刷新和上拉加载](http://www.mescroll.com/)
   - [intro.js 引导页插件](https://introjs.com/)
   - [moment.js](http://momentjs.cn/docs/)
+  - [countUp.js让数据动起来](http://inorganik.github.io/countUp.js/)
   - [Editor.md 是一款开源的、可嵌入的 Markdown 在线编辑器](https://github.com/pandao/editor.md)
   - [flex布局](https://www.runoob.com/w3cnote/flex-grammar.html) [flex布局实际操作](http://flexbox.help/)
   - [mac前端开发工具集](https://segmentfault.com/a/1190000015049824?utm_source=channel-hottest)
