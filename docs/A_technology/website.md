@@ -25,6 +25,7 @@
 - 设计站 
   - [优波-设计师必备网址----- 强烈推荐](https://www.ubuuk.com/)
   - [千通彩色彩管理](https://www.qtccolor.com/Product/GP1601N.aspx#tab=1)
+  - [觅元素-高清背景素材](http://www.51yuansu.com/)
   
 - 前端站
   - [vue](https://cn.vuejs.org/) 
