@@ -8,15 +8,15 @@
     * [2018-不畏将来，勇往直前](A_life/2018.md)
 
 * 技术杂谈
-    * [前端好文](A_technology/好文超链.md)
     * [好站推荐](A_technology/website.md)
-    - [常用CDN](A_technology/CDN.md)
+    * [常用CDN](A_technology/CDN.md)
     * [git、npm、gitflow](A_technology/git.md)
+    * [前端好文](A_technology/好文超链.md)
     * [CSS](A_technology/CSS.md)
     * [Javascript](A_technology/Javascript.md)
-    * [Mac快捷键&VS插件](A_technology/hotkey.md)
-    * [移动端调试](A_technology/移动端调试.md)
     * [知识乐园](A_technology/workRecord.md)
+    * [移动端调试](A_technology/移动端调试.md)
+    * [Mac快捷键&VS插件](A_technology/hotkey.md)
 
 
 
