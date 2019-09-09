@@ -11,6 +11,7 @@
     * [好站推荐](A_technology/website.md)
     * [git、npm、gitflow](A_technology/git.md)
     * [前端好文](A_technology/好文超链.md)
+    * [html5播放rtsp方案](A_technology/videoStream.md)
     * [Javascript](A_technology/Javascript.md)
     * [CSS](A_technology/CSS.md)
     * [工作记录](A_technology/workRecord.md)
