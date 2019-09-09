@@ -96,7 +96,9 @@ var player = new JSMpeg.Player(url, {canvas: canvas});
 
 ![](https://upload-images.jianshu.io/upload_images/4032200-9df73a0e174d96ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-如果电脑设置了睡眠之后再打开，会发现视频监控停止了，此时不要紧张，在cmd里重新执行一下 `ffmpeg -i "你的rtspurl" -q 0 -f mpegts -codec:v mpeg1video -s 1366x768 http://127.0.0.1:8081/supersecret` 
+如果电脑设置了睡眠之后再打开，会发现视频监控停止了，此时不要紧张，在cmd里重新执行一下
+1. 在D:\videoStream\jsmpeg-master路径下执行`node websocket-relay.js supersecret 8081 8082`
+2. 打开另一个cmd执行：`ffmpeg -i "你的rtspurl" -q 0 -f mpegts -codec:v mpeg1video -s 1366x768 http://127.0.0.1:8081/supersecret` 
 
 ##### 参考资料
 
