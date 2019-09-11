@@ -1,23 +1,23 @@
 
 
-* 韶华追忆
-    * [文字小驿](A_life/文字小驿.md)
-    * [书籍人生](A_life/书籍人生.md)
-    * [余生且长，不必慌张](A_life/余生且长，不必慌张.md)
-    * [2019-活成自己喜欢的样子](A_life/2019.md)
-    * [2018-不畏将来，勇往直前](A_life/2018.md)
+* 生活文字
+    * [文字小驿](生活文字/文字小驿.md)
+    * [2019-活成自己喜欢的样子](生活文字/2019—活成喜欢的模样.md)
+    * [2018-不畏将来，勇往直前](生活文字/2018—上海，新的开始.md)
 
-* 技术杂谈
-    * [好站推荐](A_technology/website.md)
-    * [git、npm、gitflow](A_technology/git.md)
-    * [前端好文](A_technology/好文超链.md)
-    * [html5播放rtsp方案](A_technology/videoStream.md)
-    * [Javascript](A_technology/Javascript.md)
-    * [CSS](A_technology/CSS.md)
-    * [工作记录](A_technology/workRecord.md)
-    * [移动端调试](A_technology/移动端调试.md)
-    * [常用CDN](A_technology/CDN.md)
-    * [Mac快捷键&VS插件](A_technology/hotkey.md)
+* [书籍人生](兴趣爱好培养/书籍人生.md)
+    
+* 前端 | 技术杂谈
+    * [好站推荐](前端技术杂谈/网站累积.md)
+    * [git、npm、gitflow](前端技术杂谈/git.md)
+    * [前端好文](前端技术杂谈/好文链接.md)
+    * [html5播放rtsp方案](前端技术杂谈/html5播放rtsp方案.md)
+    * [Javascript](前端技术杂谈/Javascript.md)
+    * [CSS](前端技术杂谈/CSS.md)
+    * [工作记录](前端技术杂谈/workRecord.md)
+    * [移动端调试](前端技术杂谈/移动端调试.md)
+    * [常用CDN](前端技术杂谈/CDN.md)
+    * [Mac快捷键&VS插件](前端技术杂谈/hotkey.md)
 
 
 
