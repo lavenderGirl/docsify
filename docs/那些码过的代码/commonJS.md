@@ -193,6 +193,23 @@
                 }else{
                     return  Math.round(num*100)/100;
                 }
+            },
+            formatTime:function(d){ // 输出为 : 2019-10-08 17:50:44  星期二
+                const year = d.getFullYear();
+                const month = d.getMonth() + 1;
+                const day = d.getDate();
+                let days = d.getDay(); 
+                const weeks = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+                const week = weeks[days];
+                const hour = d.getHours();
+                const minute = d.getMinutes();
+                const second = d.getSeconds();
+            
+                return [year, month, day].map(_DDC.formatNumber).join('-') + ' ' + [hour, minute, second].map(_DDC.formatNumber).join(':') + '  ' + week;
+            },
+            formatNumber:function(n){
+                n = n.toString()
+                return n[1] ? n : '0' + n
             }
         }
 
