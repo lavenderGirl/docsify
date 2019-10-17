@@ -495,7 +495,7 @@ npm install <name> -dev
 npm install moduleName -g。
 
 # 清除缓存
-npm cache clean
+npm cache clean --force
 
 # 验证缓存
 npm cache verify
