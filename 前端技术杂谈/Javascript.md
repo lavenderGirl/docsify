@@ -1,3 +1,13 @@
+## 手机号中间四位显示星号
+```js
+function handelMobile(value){
+  if(!value) return '';
+  if(typeof value !== 'string') value = value.toString();
+  return value.replace(/^(\d{3})\d*(\d{4})$/,'$1****$2');
+}
+// handelMobile(13923451241)  输出："139****1241"
+```
+
 ## 日期格式化函数
 ```js
 // 也可获取当前日期：formatTime(new Date())
@@ -184,110 +194,6 @@ qrcode.makeCode(QRCodeUrl);
 下载地址：http://files.cnblogs.com/files/weishuanbao/QRCode.js
 ```
 
-## 数字转换成中文
-[网上地址](http://www.cnblogs.com/breakdown/archive/2012/09/20/2689306.html1111#)
-
-```js
-   var digitaCconversion = {
-        ary0: ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"],
-        ary1: ["", "十", "百", "千"],
-        ary2: ["", "万", "亿", "兆"],
-        init: function (name) {
-            this.name = name;
-            return this.pri_ary();
-        },
-        strrev: function () {
-            var ary = []
-            for (var i = this.name.length; i >= 0; i--) {
-                ary.push(this.name[i])
-            }
-            return ary.join("");
-        }, //倒转字符串。
-        pri_ary: function () {
-            var $this = this
-            var ary = this.strrev();
-            var zero = ""
-            var newary = ""
-            var i4 = -1
-            for (var i = 0; i < ary.length; i++) {
-                if (i % 4 == 0) { //首先判断万级单位，每隔四个字符就让万级单位数组索引号递增
-                    i4++;
-                    newary = this.ary2[i4] + newary; //将万级单位存入该字符的读法中去，它肯定是放在当前字符读法的末尾，所以首先将它叠加入$r中，
-                    zero = ""; //在万级单位位置的“0”肯定是不用的读的，所以设置零的读法为空
-
-                }
-                //关于0的处理与判断。
-                if (ary[i] == '0') { //如果读出的字符是“0”，执行如下判断这个“0”是否读作“零”
-                    switch (i % 4) {
-                        case 0:
-                            break;
-                            //如果位置索引能被4整除，表示它所处位置是万级单位位置，这个位置的0的读法在前面就已经设置好了，所以这里直接跳过
-                        case 1:
-                        case 2:
-                        case 3:
-                            if (ary[i - 1] != '0') {
-                                zero = "零"
-                            }; //如果不被4整除，那么都执行这段判断代码：如果它的下一位数字（针对当前字符串来说是上一个字符，因为之前执行了反转）也是0，那么跳过，否则读作“零”
-                            break;
-                    }
-                    newary = zero + newary;
-                    zero = '';
-                }
-                else { //如果不是“0”
-                    if (ary.length == 2 && i == 1 && ary[1] == '1') { this.ary0[parseInt(ary[i])] = ''; }; //去掉10到19前面的‘一’
-                    newary = this.ary0[parseInt(ary[i])] + this.ary1[i % 4] + newary; //就将该当字符转换成数值型,并作为数组ary0的索引号,以得到与之对应的中文读法，其后再跟上它的的一级单位（空、十、百还是千）最后再加上前面已存入的读法内容。
-                }
-            }
-            if (newary.indexOf("零") == 0) {
-                newary = newary.substr(1)
-            }//处理前面的0
-            return newary;
-        }
-    };
-    
-    //用法：digitaCconversion.init('12');  输出为 ‘十二’
-```
-
-## JS获取浏览器名字及版本号
-
-工作中需要通过JS去获取当前使用的浏览器的名字以及版本号，网上大堆资料都有一个关键词是 navigator.appName，但是这个方法获取的浏览器的名字只有两种要么是IE要么就是Netscap，倒是可以用来判断是否使用了IE，但是我想获取具体的浏览器产品名字比如  Firefox，Chrome等。所以只好通过navigator.userAgent，但是这个字符串是非常长的，分析他的特征，通过正则表达式来解决这个问题是不错的方法。
-
-* 获取浏览器名字+版本字符串
-
-```js
-function getBrowserInfo() {
-    var agent = navigator.userAgent.toLowerCase();
-    var regStr_ie = /msie [\d.]+;/gi;
-    var regStr_ff = /firefox\/[\d.]+/gi
-    var regStr_chrome = /chrome\/[\d.]+/gi;
-    var regStr_saf = /safari\/[\d.]+/gi;
-    //IE
-    if (agent.indexOf("msie") > 0) {
-        return agent.match(regStr_ie);
-    }
-    //firefox
-    if (agent.indexOf("firefox") > 0) {
-        return agent.match(regStr_ff);
-    }
-    //Chrome
-    if (agent.indexOf("chrome") > 0) {
-        return agent.match(regStr_chrome);
-    }
-    //Safari
-    if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0) {
-        return agent.match(regStr_saf);
-    }
-}
-```
-
-* 然后获取版本号
-
-```js
-var browser = getBrowserInfo() ;
-alert(browser);  //browser 为当前浏览器名称以及版本号
-var verinfo = (browser+"").replace(/[^0-9.]/ig,""); //verinfo 为当前浏览器版本号
-```
-
 ## 数组去重
 [更多方法](https://segmentfault.com/a/1190000005116655)
 ```js
@@ -329,6 +235,248 @@ function isArray (obj) {
 function isArray (obj) {
   return Object.prototype.toString.call(obj) === '[object Array]';
 }
+```
+
+## 将数字转换为大写金额
+
+```js
+   /**
+ * 将数字转换为大写金额
+ * @param Num 数值
+ // 调用：changeToChinese(8998.2) 输出为："捌仟玖佰玖拾捌元贰角"
+ * */
+function changeToChinese(Num) {
+  //判断如果传递进来的不是字符的话转换为字符
+  if (typeof Num === "number")  Num = new String(Num);
+  Num = Num.replace(/,/g, "") //替换tomoney()中的“,”
+  Num = Num.replace(/ /g, "") //替换tomoney()中的空格
+  Num = Num.replace(/￥/g, "") //替换掉可能出现的￥字符
+  if (isNaN(Num)) return "";
+  //字符处理完毕后开始转换，采用前后两部分分别转换
+  var part = String(Num).split(".");
+  var newchar = "";
+  //小数点前进行转化
+  for (var i = part[0].length - 1; i >= 0; i--) {
+    if (part[0].length > 10) return "";
+    var tmpnewchar = ""
+    var perchar = part[0].charAt(i);
+    switch (perchar) {
+      case "0":
+        tmpnewchar = "零" + tmpnewchar;
+        break;
+      case "1":
+        tmpnewchar = "壹" + tmpnewchar;
+        break;
+      case "2":
+        tmpnewchar = "贰" + tmpnewchar;
+        break;
+      case "3":
+        tmpnewchar = "叁" + tmpnewchar;
+        break;
+      case "4":
+        tmpnewchar = "肆" + tmpnewchar;
+        break;
+      case "5":
+        tmpnewchar = "伍" + tmpnewchar;
+        break;
+      case "6":
+        tmpnewchar = "陆" + tmpnewchar;
+        break;
+      case "7":
+        tmpnewchar = "柒" + tmpnewchar;
+        break;
+      case "8":
+        tmpnewchar = "捌" + tmpnewchar;
+        break;
+      case "9":
+        tmpnewchar = "玖" + tmpnewchar;
+        break;
+    }
+    switch (part[0].length - i - 1) {
+      case 0:
+        tmpnewchar = tmpnewchar + "元";
+        break;
+      case 1:
+        if (perchar != 0) tmpnewchar = tmpnewchar + "拾";
+        break;
+      case 2:
+        if (perchar != 0) tmpnewchar = tmpnewchar + "佰";
+        break;
+      case 3:
+        if (perchar != 0) tmpnewchar = tmpnewchar + "仟";
+        break;
+      case 4:
+        tmpnewchar = tmpnewchar + "万";
+        break;
+      case 5:
+        if (perchar != 0) tmpnewchar = tmpnewchar + "拾";
+        break;
+      case 6:
+        if (perchar != 0) tmpnewchar = tmpnewchar + "佰";
+        break;
+      case 7:
+        if (perchar != 0) tmpnewchar = tmpnewchar + "仟";
+        break;
+      case 8:
+        tmpnewchar = tmpnewchar + "亿";
+        break;
+      case 9:
+        tmpnewchar = tmpnewchar + "拾";
+        break;
+    }
+    var newchar = tmpnewchar + newchar;
+  }
+  //小数点之后进行转化
+  if (Num.indexOf(".") != -1) {
+    if (part[1].length > 2) {
+      // alert("小数点之后只能保留两位,系统将自动截断");
+      part[1] = part[1].substr(0, 2)
+    }
+    for (i = 0; i < part[1].length; i++) {
+      tmpnewchar = ""
+      perchar = part[1].charAt(i)
+      switch (perchar) {
+        case "0":
+          tmpnewchar = "零" + tmpnewchar;
+          break;
+        case "1":
+          tmpnewchar = "壹" + tmpnewchar;
+          break;
+        case "2":
+          tmpnewchar = "贰" + tmpnewchar;
+          break;
+        case "3":
+          tmpnewchar = "叁" + tmpnewchar;
+          break;
+        case "4":
+          tmpnewchar = "肆" + tmpnewchar;
+          break;
+        case "5":
+          tmpnewchar = "伍" + tmpnewchar;
+          break;
+        case "6":
+          tmpnewchar = "陆" + tmpnewchar;
+          break;
+        case "7":
+          tmpnewchar = "柒" + tmpnewchar;
+          break;
+        case "8":
+          tmpnewchar = "捌" + tmpnewchar;
+          break;
+        case "9":
+          tmpnewchar = "玖" + tmpnewchar;
+          break;
+      }
+      if (i == 0) tmpnewchar = tmpnewchar + "角";
+      if (i == 1) tmpnewchar = tmpnewchar + "分";
+      newchar = newchar + tmpnewchar;
+    }
+  }
+  //替换所有无用汉字
+  while (newchar.search("零零") != -1)
+    newchar = newchar.replace("零零", "零");
+  newchar = newchar.replace("零亿", "亿");
+  newchar = newchar.replace("亿万", "亿");
+  newchar = newchar.replace("零万", "万");
+  newchar = newchar.replace("零元", "元");
+  newchar = newchar.replace("零角", "");
+  newchar = newchar.replace("零分", "");
+  if (newchar.charAt(newchar.length - 1) == "元") {
+    newchar = newchar + "整"
+  }
+  return newchar;
+}
+```
+
+## 将阿拉伯数字翻译成中文的大写数字
+```js
+/**
+ * 将阿拉伯数字翻译成中文的大写数字
+ * @param num 数字
+ // numberToChinese(59999.12) 输出为："五萬九仟九百九十九点一二"
+ * */
+
+function numberToChinese(num) {
+  var AA = new Array("零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十");
+  var BB = new Array("", "十", "百", "仟", "萬", "億", "点", "");
+  var a = ("" + num).replace(/(^0*)/g, "").split("."),
+    k = 0,
+    re = "";
+  for (var i = a[0].length - 1; i >= 0; i--) {
+    switch (k) {
+      case 0:
+        re = BB[7] + re;
+        break;
+      case 4:
+        if (!new RegExp("0{4}//d{" + (a[0].length - i - 1) + "}$")
+          .test(a[0]))
+          re = BB[4] + re;
+        break;
+      case 8:
+        re = BB[5] + re;
+        BB[7] = BB[5];
+        k = 0;
+        break;
+    }
+    if (k % 4 == 2 && a[0].charAt(i + 2) != 0 && a[0].charAt(i + 1) == 0)
+      re = AA[0] + re;
+    if (a[0].charAt(i) != 0)
+      re = AA[a[0].charAt(i)] + BB[k % 4] + re;
+    k++;
+  }
+
+  if (a.length > 1) // 加上小数部分(如果有小数部分)
+  {
+    re += BB[6];
+    for (var i = 0; i < a[1].length; i++)
+      re += AA[a[1].charAt(i)];
+  }
+  if (re == '一十')
+    re = "十";
+  if (re.match(/^一/) && re.length == 3)
+    re = re.replace("一", "");
+  return re;
+}
+```
+
+## JS获取浏览器名字及版本号
+
+工作中需要通过JS去获取当前使用的浏览器的名字以及版本号，网上大堆资料都有一个关键词是 navigator.appName，但是这个方法获取的浏览器的名字只有两种要么是IE要么就是Netscap，倒是可以用来判断是否使用了IE，但是我想获取具体的浏览器产品名字比如  Firefox，Chrome等。所以只好通过navigator.userAgent，但是这个字符串是非常长的，分析他的特征，通过正则表达式来解决这个问题是不错的方法。
+
+* 获取浏览器名字+版本字符串
+
+```js
+function getBrowserInfo() {
+    var agent = navigator.userAgent.toLowerCase();
+    var regStr_ie = /msie [\d.]+;/gi;
+    var regStr_ff = /firefox\/[\d.]+/gi
+    var regStr_chrome = /chrome\/[\d.]+/gi;
+    var regStr_saf = /safari\/[\d.]+/gi;
+    //IE
+    if (agent.indexOf("msie") > 0) {
+        return agent.match(regStr_ie);
+    }
+    //firefox
+    if (agent.indexOf("firefox") > 0) {
+        return agent.match(regStr_ff);
+    }
+    //Chrome
+    if (agent.indexOf("chrome") > 0) {
+        return agent.match(regStr_chrome);
+    }
+    //Safari
+    if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0) {
+        return agent.match(regStr_saf);
+    }
+}
+```
+
+* 然后获取版本号
+
+```js
+var browser = getBrowserInfo() ;
+alert(browser);  //browser 为当前浏览器名称以及版本号
+var verinfo = (browser+"").replace(/[^0-9.]/ig,""); //verinfo 为当前浏览器版本号
 ```
 
 ## vue-cli 项目构建

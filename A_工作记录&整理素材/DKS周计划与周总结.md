@@ -32,3 +32,15 @@ AppSecret：6404fba90d3cf0f0b97d8d9e845a9db9
 - echart项目中使用的各图标看能否提炼出来做成公用组件
 - 项目中用到的公用方法随时记录出来
 
+
+#### vue单页面后台管理项目
+- "axios": "0.18.1",
+- "element-ui": "2.7.2",
+- "js-cookie": "2.2.0",
+- "normalize.css": "7.0.0",
+- "nprogress": "0.2.0",
+- "path-to-regexp": "2.4.0",
+- "vue": "2.6.10",
+- "vue-router": "3.0.6",
+- "vuex": "3.1.0"
+
