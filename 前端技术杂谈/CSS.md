@@ -1,5 +1,12 @@
 [iCSS](https://github.com/chokcoco/iCSS) | [CSS灵感](https://chokcoco.github.io/CSS-Inspiration/#/) | [css常用的一些代码](https://github.com/jsfront/src/blob/master/css.md)
 
+## 文字滚动 
+
+[marquee标签详解](https://www.cnblogs.com/supereast/p/11003402.html)
+```html
+<marquee loop="infinite" direction="left" scrollamount="8" width="300">请进入新声app人脸采集微服务上传最新人脸头像，可提高识别率。</marquee>
+```
+
 ## CSS判断横屏竖屏
 ```css
 @media screen and (orientation: portrait) {
