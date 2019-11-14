@@ -8,8 +8,8 @@
  H5移动端开发 |　微信小程序开发
 
 [进入](前端技术杂谈/好站推荐.md)
-[心情物语](https://lavendergirl.github.io/TEXT/#/)
 [简书](https://www.jianshu.com/u/8fc85165da02)
+[gitHub](https://github.com/lavenderGirl?tab=repositories)
 <!-- 
 背景色
 ![color](#fff) -->
