@@ -46,6 +46,7 @@
 微信小程序、vue单页面构建、xdata-report之PC跟移动端分开成两个项目这事
 
 
+mixin  store  route components directive filters
 
 
 
