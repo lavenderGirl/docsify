@@ -48,6 +48,7 @@
 
 mixin  store  route components directive filters
 
+调用摄像头 | 地图打点  | 列表的增删改查 
 
 
 
