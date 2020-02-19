@@ -1,3 +1,33 @@
+## 扫码枪读取条形码数据（vue）
+扫码枪是模拟键盘输入的，所有事件为document.onkeypress = function(){}.
+在vue项目中，是没有window.onload的，所以在created钩子函数中做：
+```js
+  var b = "";
+  document.onkeydown = (event)=>{
+    if (event.keyCode != 13) {
+        var bizCode = String.fromCharCode(event.keyCode);
+        // if (event.keyCode >= 48 && event.keyCode <= 122) {
+            b = b + bizCode;
+        // }
+    } else {
+        b = "";
+    }
+    this.barCode = b;
+    // console.log('barcode:' + this.barCode);
+    if(this.barCode.toString().length == 20){ //支付宝跟微信条形码都是18位
+        //苹果电脑上测试时，条形码前面有两位未知码要去掉
+        this.barCode = this.barCode.toString().slice(2);
+        console.log('barCode应该输出18位：' + this.barCode)
+        this.payFn();
+    }else if(this.barCode.toString().length == 18){
+        //在win电脑上条形码正常，不用做处理
+        this.barCode = this.barCode.toString();
+        console.log('barCode应该输出18位：' + this.barCode)
+        this.payFn();
+    }
+  };
+```
+
 ## 手机号中间四位显示星号
 ```js
 function handelMobile(value){
