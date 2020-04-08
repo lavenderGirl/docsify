@@ -27,7 +27,15 @@
     }
   };
 ```
-
+## js 验证手机号码和座机号码
+```js
+// checkTel('020-12345678') => true   checkTel('13590871234') => true 
+function checkTel(tel) 
+{
+   var mobile = /^1[3|4|5|7|8][0-9]\d{8}$/ , phone = /^0\d{2,3}-?\d{7,8}$/;
+   return mobile.test(tel) || phone.test(tel);
+}
+```
 ## 手机号中间四位显示星号
 ```js
 function handelMobile(value){
