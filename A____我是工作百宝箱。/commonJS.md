@@ -1,10 +1,4 @@
 ```js
-/*!
- * ddc.js v1.1.2
- * (c) 2018-2019 
- * 日日煮 Daydaycook
- */
-;
 (function(global, factory) {
     typeof define === 'function' && define.amd ?
         define(function() {
