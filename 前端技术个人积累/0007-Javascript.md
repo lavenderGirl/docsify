@@ -1,3 +1,94 @@
+
+## h5 Video打开本地摄像头和离开页面关闭摄像头
+```html
+<video id="video" ref="video" width="640" height="480"></video>
+<canvas id="canvas" ref="canvas" width="640" height="480"></canvas>
+```
+```js
+methods:{
+  clickToPhoto(){
+      //点击把当前视频截图
+      this.ctx.drawImage(this.video, 0, 0, this.video.clientWidth, this.video.clientHeight);
+      this.photoUrl = this.canvas.toDataURL('image/png');
+  },
+  liveVideo(){
+      this.video = this.$refs.video;
+      this.canvas = this.$refs.canvas;
+      this.ctx = this.canvas.getContext('2d');
+
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          navigator.mediaDevices.getUserMedia({
+              video: true,
+          }).then((stream)=>{
+              this.MediaStreamTrack=typeof stream.stop==='function'?stream:stream.getTracks()[0];
+              this.video["srcObject"]=stream;
+              this.video.play();
+          }).catch((err)=>{
+              console.log(err);
+              //调用摄像头失败给的提示
+          });
+      }else{
+          console.log('getUserMedia is not implemented in this browser');
+      }
+  },
+  closeVideo(){ //关闭摄像头
+      console.log(this.MediaStreamTrack);
+      this.MediaStreamTrack && this.MediaStreamTrack.stop();
+  }
+}
+```
+
+##  pc和移动端获取滚动条的位置
+```js
+移动端获取滚动条:document.body.scrollTop
+pc端获取滚动条:document.documentElement.scrollTop
+```
+## JS移动端判断上拉和下滑
+``` js
+    //滑动处理
+var startX, startY;
+document.addEventListener('touchstart',function (ev) {
+    startX = ev.touches[0].pageX;
+    startY = ev.touches[0].pageY;
+}, false);
+
+document.addEventListener('touchend',function (ev) {
+    var endX, endY;
+    endX = ev.changedTouches[0].pageX;
+    endY = ev.changedTouches[0].pageY;
+    var direction = GetSlideDirection(startX, startY, endX, endY);
+    switch(direction) {
+        case 0:
+                alert("无操作");
+            break;
+        case 1:
+            // 向上
+            alert("up");
+            break;
+        case 2:
+            // 向下
+            alert("down");
+            break;
+
+        default:
+    }
+  }, false);
+
+function GetSlideDirection(startX, startY, endX, endY) {
+    var dy = startY - endY;
+    //var dx = endX - startX;
+    var result = 0;
+    if(dy>0) {//向上滑动
+        result=1;
+    }else if(dy<0){//向下滑动
+        result=2;
+    }else{
+        result=0;
+    }
+    return result;
+  }
+```
+
 ## 扫码枪读取条形码数据（vue）
 扫码枪是模拟键盘输入的，所有事件为document.onkeypress = function(){}.
 在vue项目中，是没有window.onload的，所以在created钩子函数中做：
