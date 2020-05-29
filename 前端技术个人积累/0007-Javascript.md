@@ -32,7 +32,6 @@ methods:{
       }
   },
   closeVideo(){ //关闭摄像头
-      console.log(this.MediaStreamTrack);
       this.MediaStreamTrack && this.MediaStreamTrack.stop();
   }
 }
@@ -42,51 +41,6 @@ methods:{
 ```js
 移动端获取滚动条:document.body.scrollTop
 pc端获取滚动条:document.documentElement.scrollTop
-```
-## JS移动端判断上拉和下滑
-``` js
-    //滑动处理
-var startX, startY;
-document.addEventListener('touchstart',function (ev) {
-    startX = ev.touches[0].pageX;
-    startY = ev.touches[0].pageY;
-}, false);
-
-document.addEventListener('touchend',function (ev) {
-    var endX, endY;
-    endX = ev.changedTouches[0].pageX;
-    endY = ev.changedTouches[0].pageY;
-    var direction = GetSlideDirection(startX, startY, endX, endY);
-    switch(direction) {
-        case 0:
-                alert("无操作");
-            break;
-        case 1:
-            // 向上
-            alert("up");
-            break;
-        case 2:
-            // 向下
-            alert("down");
-            break;
-
-        default:
-    }
-  }, false);
-
-function GetSlideDirection(startX, startY, endX, endY) {
-    var dy = startY - endY;
-    //var dx = endX - startX;
-    var result = 0;
-    if(dy>0) {//向上滑动
-        result=1;
-    }else if(dy<0){//向下滑动
-        result=2;
-    }else{
-        result=0;
-    }
-    return result;
-  }
 ```
 
 ## 扫码枪读取条形码数据（vue）
@@ -104,16 +58,13 @@ function GetSlideDirection(startX, startY, endX, endY) {
         b = "";
     }
     this.barCode = b;
-    // console.log('barcode:' + this.barCode);
     if(this.barCode.toString().length == 20){ //支付宝跟微信条形码都是18位
         //苹果电脑上测试时，条形码前面有两位未知码要去掉
         this.barCode = this.barCode.toString().slice(2);
-        console.log('barCode应该输出18位：' + this.barCode)
         this.payFn();
     }else if(this.barCode.toString().length == 18){
         //在win电脑上条形码正常，不用做处理
         this.barCode = this.barCode.toString();
-        console.log('barCode应该输出18位：' + this.barCode)
         this.payFn();
     }
   };
