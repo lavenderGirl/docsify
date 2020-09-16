@@ -301,6 +301,15 @@ $ git archive
 ```
 git原文章地址：[https://www.cnblogs.com/chenwolong/p/GIT.html](https://www.cnblogs.com/chenwolong/p/GIT.html)
 
+### 十一、git—解决每次拉取、提交代码时都需要输入用户名和密码(这种方式在mac电脑上OK)
+```
+<!-- 1.在~/.gitconfig目录下多出一个文件，用来记录你的密码和帐号 -->
+git config --global credential.helper store
+
+<!-- 2.再最后输入一次正确的用户名和密码，就可以成功的记录下来，这是最后一次麻烦啦！ -->
+git pull
+```
+
 ## 特殊处理-回滚
 ```
   - git reset --hard [commit-hash:e377f60e28c8b84158]
