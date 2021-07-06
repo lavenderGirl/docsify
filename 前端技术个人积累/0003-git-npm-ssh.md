@@ -291,8 +291,10 @@ $ git reset --keep [commit]
 $ git revert [commit]
 
 # 暂时将未提交的变化移除，稍后再移入
-$ git stash
-$ git stash pop
+$ git stash save 'xxx'
+$ git stash list
+$ git stash apply 'xxx'
+
 ```
 ### 十、其他
 ```
