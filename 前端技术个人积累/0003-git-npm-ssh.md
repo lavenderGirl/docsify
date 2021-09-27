@@ -296,6 +296,17 @@ $ git stash list
 $ git stash apply 'xxx'
 
 ```
+#### git命令-删除远程提交记录
+```
+<!-- 例子 -->
+1. 强制回滚到某一提交（确保没有其他人提交之前）
+git reset --hard commit-id
+git push origin develop -f  (这里以develop分支为例，强制覆盖)
+
+2.删除某一个提交（git revert）
+使用git revert可以删除某一次提交，并为本次删除生成一个新的提交。也就是说不是把之前的提交记录抹去，在提交记录中还是能看到之前的提交，并且有一个新的revert提交，把之前的提交取消掉
+git revert <commitId>
+```
 ### 十、其他
 ```
 # 生成一个可供发布的压缩包
