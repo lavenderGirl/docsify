@@ -1,1 +1,0 @@
-- [vuex：弄懂mapState、mapGetters、mapMutations、mapActions](https://zhuanlan.zhihu.com/p/100941659)
