@@ -9,9 +9,10 @@
 
  具备web&H5、uniapp多平台、微信小程序、混合前端开发经验。
 
-[进入](前端技术个人积累/0001-好站推荐.md)
-[简书](https://www.jianshu.com/u/8fc85165da02)
+[我的简书](https://www.jianshu.com/u/8fc85165da02)
+[在线简历](https://lavendergirl.github.io/resume-new/dist/index.html)
 [gitHub](https://github.com/lavenderGirl?tab=repositories)
+[进入](前端技术个人积累/0001-好站推荐.md)
 <!-- 
 背景色
 ![color](#fff) -->
